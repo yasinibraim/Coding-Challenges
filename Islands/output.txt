@@ -1,0 +1,3 @@
+Numarul de insule = 8
+Suprafata celei mai mari insule =  22
+Suprafata celei mai mari lagune =  15
