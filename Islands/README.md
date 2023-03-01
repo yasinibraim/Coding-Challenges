@@ -75,10 +75,4 @@ Suprafata celei mai mari lagune = 2
 
 # Approach:
 
-At a first glance, the intersections map might look like a matrix, due to the sugestive images. But, this is actually an undirected graph, in which each intersection represents a node and each street that conects two intersections is an edge. After this has been decided on, the problem becomes a simple path finding one. 
-
-There are multiple valid approaches if we decide to continue on the previous graph assumption. The problem could be solved with multiple algorithms, such as Dijkstra (possible, but not needed since Dijkstra is used for weighted graphs), BFS, DFS, or other backtracking algorithms.
-
-I decided upon using BFS, since it's the most common algorithm used for shortest path problems, where edges weight is not needed. 
-
-Handling the traffic jams is another story. We could either delete the respective nodes/vertices, delete the connecting edges, or assign an infinite weight to any connecting edge, in case we want to use Dijkstra. I decided upon adding a simple check when creating the edges: if one of the ends of the probable edge is jammed, do not create the edge. I avoided messing with vertices, sinces deleting any nodes is a little more complex, since we rely on each vertices position in the Graph to determine it's position on the matrix-like map. If we were to remove some vertices, all the following nodes will be shifted by a given number of positions to the left. This would imply storing another value for each node, representing it's offset on the matrix-like representation.
+This is a simple DFS exercise. I've implemented one DFS search for finding out the number of islands and one for the lagoons.
